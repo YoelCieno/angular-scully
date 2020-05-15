@@ -1,17 +1,9 @@
-<header>
-  <h1 class="logo"><a routerLink="/">Jamgular</a></h1>
-
-  <nav id="main-menu" class="main-menu" aria-label="Main menu">
-    <ul>
-      <li>
-        <a routerLink="/">Home</a>
-      </li>
-      <li>
-        <a routerLink="/about">About</a>
-      </li>
-      <li>
-        <a routerLink="/contact">Contact Us</a>
-      </li>
-    </ul>
-  </nav>
-</header>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav [mode]="mode.value" [fixedInViewport]="true">
+    <button mat-button (click)="sidenav.toggle()">Toggle</button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button mat-button (click)="sidenav.toggle()">Toggle</button>
+    <main><ng-content></ng-content></main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

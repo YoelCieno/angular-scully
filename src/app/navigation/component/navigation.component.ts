@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-navigation',
@@ -6,9 +7,13 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./navigation.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NavigationComponent implements OnInit {
 
-  constructor() { }
+export class NavigationComponent implements OnInit {
+  public mode: FormControl;
+  
+  constructor() { 
+    this.mode = new FormControl('over');
+  }
 
   ngOnInit(): void {
   }

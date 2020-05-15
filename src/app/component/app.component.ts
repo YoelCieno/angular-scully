@@ -6,6 +6,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
+
 export class AppComponent {
-  title = 'base-project';
+  title = 'Crecer EIP';
 }

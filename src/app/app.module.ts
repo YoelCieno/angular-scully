@@ -5,15 +5,26 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./component/app.component";
 import { NavigationComponent } from "./navigation/component/navigation.component";
 import { ScullyLibModule } from '@scullyio/ng-lib';
-
-import '@material/mwc-top-app-bar-fixed';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatButtonModule} from '@angular/material/button';
+import {MatRadioModule} from '@angular/material/radio';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [AppComponent, NavigationComponent],
-  imports: [BrowserModule, AppRoutingModule, ScullyLibModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ScullyLibModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatRadioModule,
+    MatSidenavModule,
+    ReactiveFormsModule
+  ],
   providers: [],
-  bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  bootstrap: [AppComponent]
 })
 
 export class AppModule {}

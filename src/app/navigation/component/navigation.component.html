@@ -1,3 +1,7 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+  <h1>{{ title }}</h1>
+</mat-toolbar>
 <mat-sidenav-container>
   <mat-sidenav #sidenav [mode]="mode.value" [fixedInViewport]="true">
     <button mat-button (click)="sidenav.toggle()">Toggle</button>

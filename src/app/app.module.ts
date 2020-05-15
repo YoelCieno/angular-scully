@@ -8,8 +8,11 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
-import {MatRadioModule} from '@angular/material/radio';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
 import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [AppComponent, NavigationComponent],
   imports: [
@@ -18,7 +21,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ScullyLibModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatRadioModule,
+    MatIconModule,
+    MatListModule,
+    MatToolbarModule,
     MatSidenavModule,
     ReactiveFormsModule
   ],

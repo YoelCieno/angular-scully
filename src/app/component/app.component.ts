@@ -8,5 +8,5 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'Crecer EIP';
+
 }

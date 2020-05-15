@@ -9,6 +9,7 @@ import { FormControl } from '@angular/forms';
 })
 
 export class NavigationComponent implements OnInit {
+  public title = 'Crecer EIP';
   public mode: FormControl;
   
   constructor() { 

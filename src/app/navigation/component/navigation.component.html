@@ -1,13 +1,14 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
-  <h1>{{ title }}</h1>
+  <header>
+    <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+    <h1>{{ title }}</h1>
+  </header>
 </mat-toolbar>
 <mat-sidenav-container>
   <mat-sidenav #sidenav [mode]="mode.value" [fixedInViewport]="true">
-    <button mat-button (click)="sidenav.toggle()">Toggle</button>
+    <aside><button mat-button (click)="sidenav.toggle()">Toggle</button></aside>
   </mat-sidenav>
   <mat-sidenav-content>
-    <button mat-button (click)="sidenav.toggle()">Toggle</button>
     <main><ng-content></ng-content></main>
   </mat-sidenav-content>
 </mat-sidenav-container>

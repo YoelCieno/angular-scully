@@ -5,3 +5,13 @@ main {
 main, .mat-drawer-container {
   height: 100%;
 }
+header {
+  width: 100%;
+  h1 {
+    line-height: 2;
+  }
+  h1, .mat-icon-button {
+    display: inline-block;
+    vertical-align: top;
+  }
+}

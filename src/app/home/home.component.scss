@@ -1,0 +1,17 @@
+.mat-card-content {
+  display: flex;
+  justify-content: space-between;
+}
+button[mat-raised-button] + *[mat-raised-button] {
+  margin-left: 1rem;
+}
+.card {
+  max-width: 34rem;
+}
+.header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+.button-row {
+  display: table-cell;
+}

@@ -14,7 +14,7 @@
 // hue. Available color palettes: https://material.io/design/color/
 
 $primary: mat-palette($soft-peach-color, 50);
-$accent: mat-palette($atlantis-color, A300);
+$accent: mat-palette($atlantis-color);
 
 // The warn palette is optional (defaults to red).
 $warn: mat-palette($soft-peach-color, A200);

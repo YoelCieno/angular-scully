@@ -5,9 +5,6 @@
 // Custom Theming for Angular Material
 @include mat-core();
 
-// Custom Fonts
-@include font-face('Montserrat', assets/fonts/montserrat-regular, normal, 400);
-
 // Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
 @include mat-base-typography($custom-typography);
 
@@ -26,8 +23,6 @@ $warn: mat-palette($soft-peach-color, A200);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $theme: mat-light-theme($primary, $accent, $warn);
-
-
 
 // Include theme styles for core and each component used in your app.
 @include angular-material-theme($theme);

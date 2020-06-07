@@ -1,5 +1,34 @@
 
-Todo:
-  ☐ Check font size -> better montserrat
-  ☐ Transform toolbar to fixed ok
-  ☐ Crecer Icon to sidenav
+@critical @high @low @today
+
+Todos:
+  New:
+    ☐ Transform toolbar to fixed with shadow @started(20-06-07 01:48)
+    ☐ Crecer Icon to sidenav
+    ✔ Check font size -> better montserrat @done(20-06-07 02:02)
+  Done:
+    ☐ Check font size -> better montserrat
+  Cancelled:
+
+Timekeeping:
+  ✔ Completed todos can show a timestamp @done(17-11-03 10:42)
+  ☐ Press Alt+S to mark a todo as started @started(17-11-03 10:42)
+  ✔ Now it will show the elapsed time @started(17-11-03 10:42) @done(17-11-03 20:11) @lasted(9h29m)
+  ☐ You can provide time estimates for your todos @1h30m
+  ☐ We are even doing some natural language processing @est(1 day and 20 minutes)
+        
+        
+Archive:
+  ☐ ✔ Check font size -> better montserrat
+    
+    
+Formatting:
+  You can format text in a markdown-like fashion
+  Bold:
+    ☐ Use asterisks for *bold*
+  Italic:
+    ☐ Use underscores for _italic_
+  Strikethrough:
+    ☐ Use tildes for ~strikethrough~
+  Code:
+    ☐ Use backticks for `code`

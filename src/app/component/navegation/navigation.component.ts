@@ -13,7 +13,6 @@ export class NavigationComponent implements OnInit, OnDestroy {
   public title: string;
   public mobileQuery: MediaQueryList;
   public fillerNav: Array<{ name: string }>;
-  public isMobile: boolean;
 
   private _mobileQueryListener: () => void;
 
@@ -33,15 +32,17 @@ export class NavigationComponent implements OnInit, OnDestroy {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
+  public trackByFn(index: number): number {
+    return index;
+  }
+
   public signTo(): Promise<boolean> {
     return;
   }
   
-  private toogleMobile(): boolean {
+  private toogleMobile(): void {
     this.mobileQuery = this.media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => this.cd.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
-    if (this.mobileQuery.matches) return this.isMobile = true;
-    return;
   }
 }

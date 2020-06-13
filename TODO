@@ -13,7 +13,7 @@ Backlog:
       Wating for other:
         ☐ Side bar options
     Done:
-      ✔ Check font size -> better montserrat @done(20-06-07 02:02)
+      ✔ Check font size -> better montserrat
       ☐ Transform toolbar to fixed with shadow @started(20-06-07 01:48)
       ☐ Check font size -> better Montserrat
     
@@ -31,7 +31,7 @@ Archive:
       ☐ Use tildes for ~strikethrough~
     Code:
       ☐ Use backticks for `code`
-      Timekeeping:
+    Timekeeping:
       ✔ Completed todos can show a timestamp @done(17-11-03 10:42)
       ☐ Press Alt+S to mark a todo as started @started(17-11-03 10:42)
       ✔ Now it will show the elapsed time @started(17-11-03 10:42) @done(17-11-03 20:11) @lasted(9h29m)

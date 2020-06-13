@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef, OnDestroy } from '@angular/core';
-import {MediaMatcher} from '@angular/cdk/layout';
+import { MediaMatcher } from '@angular/cdk/layout';
 import { AppConstants } from 'src/app/app.constants';
 
 @Component({
@@ -13,6 +13,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
   public title: string;
   public mobileQuery: MediaQueryList;
   public fillerNav: Array<{ name: string }>;
+  public open: boolean;
 
   private _mobileQueryListener: () => void;
 
@@ -26,6 +27,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.toogleMobile();
+    this.open = true;
   }
 
   ngOnDestroy(): void {
@@ -42,7 +44,10 @@ export class NavigationComponent implements OnInit, OnDestroy {
   
   private toogleMobile(): void {
     this.mobileQuery = this.media.matchMedia('(max-width: 600px)');
-    this._mobileQueryListener = () => this.cd.detectChanges();
+    this._mobileQueryListener = () => {
+      this.open = false;
+      this.cd.detectChanges();
+    }
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 }

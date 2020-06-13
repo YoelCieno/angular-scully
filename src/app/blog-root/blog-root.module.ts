@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { BlogRootRoutingModule } from './blog-root-routing.module';
-import { BlogRootComponent } from './blog-root.component';
+import { BlogRootComponent } from './component/blog-root.component';
 
 
 @NgModule({

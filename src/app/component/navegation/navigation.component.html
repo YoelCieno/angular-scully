@@ -2,16 +2,21 @@
   <mat-toolbar color="primary" class="nav-toolbar mat-elevation-z2">
     <header>
       <div>
-        <button mat-icon-button (click)="sidenav?.toggle()"><mat-icon>menu</mat-icon></button>
+        <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
         <h1>{{ title }}</h1>
       </div>
       <button class="text-right" mat-icon-button (click)="signTo()"><mat-icon>account_circle</mat-icon></button>
     </header>
   </mat-toolbar>
   <mat-sidenav-container class="nav-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-    <mat-sidenav #sidenav [opened]="open" [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+    <mat-sidenav 
+      #sidenav 
+      [opened]="open" 
+      [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56">
       <mat-nav-list *ngFor="let nav of fillerNav; trackBy: trackByFn">
-        <a mat-list-item [routerLink]="[nav.link]">
+        <a mat-list-item [routerLink]="[nav.link]" (click)="mobileQuery.matches && sidenav.toggle()">
           <mat-icon>{{ nav.icon }}</mat-icon><span class="name">{{ nav.name }}</span>
         </a>
       </mat-nav-list>

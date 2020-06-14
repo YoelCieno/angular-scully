@@ -22,4 +22,11 @@ describe('NavigationComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have as title 'Crecer EIP'`, () => {
+    const fixture = TestBed.createComponent(NavigationComponent);
+    const nav = fixture.componentInstance;
+    expect(nav.title).toEqual('Crecer EIP');
+  });
+
 });

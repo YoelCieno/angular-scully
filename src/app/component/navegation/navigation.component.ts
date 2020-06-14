@@ -12,7 +12,7 @@ import { AppConstants } from 'src/app/app.constants';
 export class NavigationComponent implements OnInit, OnDestroy {
   public title: string;
   public mobileQuery: MediaQueryList;
-  public fillerNav: Array<{ name: string }>;
+  public fillerNav: Array<{ name: string; icon: string; link: string; }>;
   public open: boolean;
 
   private _mobileQueryListener: () => void;
@@ -46,7 +46,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
     this.mobileQuery = this.media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => {
       this.open = false;
-      this.cd.detectChanges();
+      this.cd.markForCheck();
     }
     this.mobileQuery.addListener(this._mobileQueryListener);
   }

@@ -26,7 +26,6 @@ import { NavigationComponent } from './component/navegation/navigation.component
     MatSidenavModule,
     MatListModule
   ],
-  providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })

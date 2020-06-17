@@ -19,6 +19,13 @@ main, .mat-drawer-container {
   height: 100%;
 }
 
+.logo {
+  max-width: 3.25rem;
+  margin-left: .55rem;
+  &:hover {
+    opacity: .875;
+  }
+}
 .name {
   margin-left: .5rem;
 }

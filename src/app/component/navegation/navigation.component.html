@@ -3,6 +3,9 @@
     <header>
       <div>
         <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+        <a [routerLink]="['/']" routerLinkActive="router-link-active">
+          <img class="logo" src="assets/img/logo_mark.svg" alt="Símbolo logo Crecer">
+        </a>
         <h1>{{ title }}</h1>
       </div>
       <button class="text-right" mat-icon-button (click)="signTo()"><mat-icon>account_circle</mat-icon></button>

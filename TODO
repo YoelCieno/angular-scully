@@ -1,26 +1,26 @@
 
 @critical @high @low @today
 
-Backlog:
-  ☐ Illustrate Icon @est(2h)
-  ☐ Crecer Icon to toolbar @est(2h)
+# Backlog:
   ☐ Languages @est(2 day) Split in two parts
   
-  Todos:
+## Todos:
   New:
-    ☐ mat-sidenav-container to a new module @high @est(1d)
+    ☐ navigation -> mat-sidenav-container refactor modules @high @est(1d)
     Doing:
-      Wating for other:
-        ☐ Side bar options
+      ☐ Crecer Icon to toolbar @est(2h)
+      ☐ Side bar options
     Done:
-      ✔ Check font size -> better montserrat
+      ☐ Illustrate Icon @est(2h) @done(20-06-17 19:10)
+      ☐ Check font size -> better montserrat
       ☐ Transform toolbar to fixed with shadow @started(20-06-07 01:48)
       ☐ Check font size -> better Montserrat
     
   Check bussiness OK:
     ☐ Check font size -> better montserrat @started(20-06-07 04:24)
+    ☐ Illustrate Icon @est(2h) @end(20-06-17 19:10)
     
-Archive:
+### Archive:
   Formatting:
     You can format text in a markdown-like fashion
     Bold:

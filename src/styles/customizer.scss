@@ -1,7 +1,7 @@
 @import 'mixins';
 @import 'palette';
 
-// Custom Fonts
+// Fonts
 @include font-face('Montserrat', assets/fonts/montserrat-regular, normal, 400);
 
 $custom-typography: mat-typography-config(
@@ -10,7 +10,32 @@ $custom-typography: mat-typography-config(
   $body-1: mat-typography-level(16px, 24px, 500)
 );
 
-// Custom Icons
+
+// Icons
 .mat-icon {
   color: $dark-primary-text;
+}
+
+// Drawer
+.mat-drawer-inner-container {
+  padding-right: 2rem;
+}
+
+// List
+.mat-nav-list.mat-list-base {
+  padding: 0 1rem 0 .75rem;
+  .mat-list-item.mat-focus-indicator {
+    &:first-child {
+      margin-top: .5rem;
+    }
+    margin-top: .1rem;
+    border-radius: .25rem;
+    &:hover {
+      background: rgba(187, 134, 252, 0.12);
+    }
+    &:focus, &:active, &:focus:hover {
+      background: #e4dcf2;
+    }
+  }
+
 }

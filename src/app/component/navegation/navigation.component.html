@@ -13,13 +13,16 @@
   </mat-toolbar>
   <mat-sidenav-container class="nav-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
     <mat-sidenav 
-      #sidenav 
-      [opened]="open" 
+      #sidenav
       [mode]="mobileQuery.matches ? 'over' : 'side'"
       [fixedInViewport]="mobileQuery.matches"
       fixedTopGap="56">
-      <mat-nav-list *ngFor="let nav of fillerNav; trackBy: trackByFn">
-        <a mat-list-item [routerLink]="[nav.link]" (click)="mobileQuery.matches && sidenav.toggle()">
+      <mat-nav-list>
+        <a mat-list-item *ngFor="let nav of fillerNav; trackBy: trackByFn"
+          (focus)="focus($event)"
+          [routerLink]="[nav.link]"
+          routerLinkActive="active"
+          (click)="toggleSideNav($event)">
           <mat-icon>{{ nav.icon }}</mat-icon><span class="name">{{ nav.name }}</span>
         </a>
       </mat-nav-list>

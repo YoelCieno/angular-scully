@@ -1,6 +1,7 @@
-import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef, OnDestroy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef, OnDestroy, ViewChild } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { AppConstants } from 'src/app/app.constants';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-navigation',
@@ -10,10 +11,12 @@ import { AppConstants } from 'src/app/app.constants';
 })
 
 export class NavigationComponent implements OnInit, OnDestroy {
+  @ViewChild('sidenav') sideNav: MatSidenav;
+
   public title: string;
   public mobileQuery: MediaQueryList;
   public fillerNav: Array<{ name: string; icon: string; link: string; }>;
-  public open: boolean;
+  public opened: boolean;
 
   private _mobileQueryListener: () => void;
 
@@ -27,11 +30,21 @@ export class NavigationComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.toogleMobile();
-    this.open = true;
   }
 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
+  }
+
+  public toggleSideNav(e: Event) {
+    e.preventDefault();
+    console.log('this.sideNav:', this.sideNav)
+    if (this.mobileQuery.matches) this.sideNav.toggle();
+
+  }
+
+  public focus(e: Event) {
+    console.log('e:', e);
   }
 
   public trackByFn(index: number): number {
@@ -44,10 +57,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
   
   private toogleMobile(): void {
     this.mobileQuery = this.media.matchMedia('(max-width: 600px)');
-    this._mobileQueryListener = () => {
-      this.open = false;
-      this.cd.markForCheck();
-    }
+    this._mobileQueryListener = () => this.cd.markForCheck();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 }

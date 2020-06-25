@@ -17,6 +17,9 @@ $custom-typography: mat-typography-config(
 }
 
 // Drawer
+.mat-drawer {
+  min-width: 260px;
+}
 .mat-drawer-inner-container {
   padding-right: 2rem;
 }
@@ -29,13 +32,15 @@ $custom-typography: mat-typography-config(
       margin-top: .5rem;
     }
     margin-top: .1rem;
-    border-radius: .25rem;
-    &:hover {
-      background: rgba(187, 134, 252, 0.12);
+    border-radius: .25rem; 
+    &.active, &.active:hover {
+      background-color: rgba(187, 134, 252, 0.12);
+      @media(min-width: 600px) {
+        background-color: #e4dcf2;
+      }
     }
-    &:focus, &:active, &:focus:hover {
-      background: #e4dcf2;
+    &:hover {
+      background-color: rgba(187, 134, 252, 0.12);
     }
   }
-
 }

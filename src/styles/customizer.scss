@@ -34,13 +34,14 @@ $custom-typography: mat-typography-config(
     margin-top: .1rem;
     border-radius: .25rem; 
     &.active, &.active:hover {
-      background-color: rgba(187, 134, 252, 0.12);
+      background-color: map-get($soft-peach_hv, 600);
       @media(min-width: 600px) {
-        background-color: #e4dcf2;
+        background-color: map-get($soft-peach_hv, 600);
+        // #fbb2e585
       }
     }
     &:hover {
-      background-color: rgba(187, 134, 252, 0.12);
+      background-color: map-get($soft-peach_hv, 500);
     }
   }
 }

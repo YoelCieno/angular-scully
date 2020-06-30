@@ -10,7 +10,7 @@ $light-dividers: rgba(white, 0.12);
 $light-focused: rgba(white, 0.12);
 $background: rgba(#BB86FC, 0.12);
 
-$atlantis-color: (
+$atlantis: (
   50: #f3f7e7,
   100: #e0ebc3,
   200: #cbde9d,
@@ -43,7 +43,7 @@ $atlantis-color: (
   )
 );
 
-$soft-peach-color: (
+$soft-peach: (
   50: #f2e9ea,
   100 : #d7c9cd,
   200 : #bca6ac,
@@ -74,4 +74,13 @@ $soft-peach-color: (
     A400: $light-primary-text,
     A700: $light-primary-text,
   )
+);
+
+$soft-peach_hv: (
+  100: #ff8fac4d,
+  200: #ff8ff14d,
+  300: #ecc5c94a,
+  400: #ff8fdd29,
+  500: #e8a0d233,
+  600: #e8a0d24d
 );

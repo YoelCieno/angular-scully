@@ -2,13 +2,3 @@
 
 html, body { height: 100%; }
 body { margin: 0 }
-
-.flex-block { display: flex }
-
-@media (orientation: portrait) {
-  .flex-block\@portrait { display: flex }
-}
-
-@media (orientation: landscape) {
-  .flow-wrap\@landscape {flex-wrap: wrap}
-}

@@ -1,8 +1,18 @@
+.values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  header {
+    text-align: center;
+    @media (min-width: 60rem) {
+      padding: 1rem;
+    }
+  }
+}
 .main-text {
-  margin: 1rem 1rem 1rem .5rem;
-  text-align: justify; 
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .main-img {
-  margin: 1rem;
-  max-width: 600px;
+  min-width: 10%;
+  max-width: 100%;
 }

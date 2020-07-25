@@ -52,7 +52,7 @@ main, .mat-drawer-container {
 .toolbar-container {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;

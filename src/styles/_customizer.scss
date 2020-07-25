@@ -18,10 +18,14 @@ $custom-typography: mat-typography-config(
 
 // Drawer
 .mat-drawer {
-  min-width: 260px;
+  min-width: 16.22rem;
+  overflow-x: hidden;
 }
 .mat-drawer-inner-container {
   padding-right: 2rem;
+}
+.mat-drawer-content.mat-sidenav-content {
+  overflow: initial;
 }
 
 // List

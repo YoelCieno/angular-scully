@@ -37,7 +37,6 @@ $custom-typography: mat-typography-config(
       background-color: map-get($soft-peach_hv, 600);
       @media(min-width: 600px) {
         background-color: map-get($soft-peach_hv, 600);
-        // #fbb2e585
       }
     }
     &:hover {
@@ -45,3 +44,6 @@ $custom-typography: mat-typography-config(
     }
   }
 }
+
+
+// 

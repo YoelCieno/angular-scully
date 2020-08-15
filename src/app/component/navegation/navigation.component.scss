@@ -15,9 +15,12 @@ main {
   background: url(https://bit.ly/2QLtEKB) no-repeat bottom center fixed;
   background-size: cover;
   padding-top: 1px; // Fix background space top
-}
-main, .mat-drawer-container {
+  overflow: auto;
   height: 100%;
+  
+}
+.mat-drawer-container {
+  height: calc(100% - 0.1px);
 }
 
 .logo {

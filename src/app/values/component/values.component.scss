@@ -1,9 +1,9 @@
-.values {
+.content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
   header {
     text-align: center;
-    @media (min-width: 60rem) {
+    @media (min-width: 964px) {
       padding: 1rem;
     }
   }

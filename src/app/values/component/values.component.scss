@@ -1,21 +1,35 @@
+header {
+  position: relative;
+  text-align: center;
+  .title {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+  }
+}
 .content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-  @media (min-width: 1315px) {
+  @media (min-width: 48rem) {
     grid-template-columns: 1fr 1fr;
   }
   header {
-    text-align: center;
-    @media (min-width: 964px) {
+    @media (min-width: 60.25rem) {
       padding: 1rem;
+      &.subheader {
+        margin-top: .5rem;
+      }
     }
   }
 }
 .main-text {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: .25rem;
+  @media (min-width: 22.5rem) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 .main-img {
   min-width: 10%;
   max-width: 100%;
+  position: relative;
 }

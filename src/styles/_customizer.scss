@@ -10,6 +10,15 @@ $custom-typography: mat-typography-config(
   $body-1: mat-typography-level(16px, 24px, 500)
 );
 
+h1 {
+  font-size: 3rem;
+  line-height: 1rem;
+}
+
+// Buttons
+button[isroundbutton] {
+  border-radius: 1rem;
+}
 
 // Icons
 .mat-icon {
@@ -39,15 +48,9 @@ $custom-typography: mat-typography-config(
     border-radius: .25rem; 
     &.active, &.active:hover {
       background-color: map-get($soft-peach_hv, 600);
-      @media(min-width: 600px) {
-        background-color: map-get($soft-peach_hv, 600);
-      }
     }
     &:hover {
       background-color: map-get($soft-peach_hv, 500);
     }
   }
 }
-
-
-// 

@@ -1,6 +1,6 @@
 export class AppConstants {
   static readonly TITLE = 'Crecer EIP';
-	static readonly MENU_LIST = [
+  static readonly MENU_LIST = [
     { name: 'Nuestro valores', icon: 'nature_people', link: '/values' },
     { name: 'Noticias', icon: 'cast_connected', link: '/news' },
     { name: 'Proyectos', icon: 'library_books', link: '/projects' },

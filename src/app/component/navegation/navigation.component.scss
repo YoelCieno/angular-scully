@@ -26,7 +26,10 @@ main {
   min-width: 16.22rem;
   overflow-x: hidden;
 }
-.mat-drawer-container { height: calc(100% - 0.1px) }
+.mat-drawer-container {
+  color: $primary-text;
+  height: calc(100% - 0.1px) 
+}
 .mat-drawer-inner-container {
   padding-right: 2rem;
 }

@@ -1,7 +1,6 @@
-// =============================================================================
-// String Replace
-// =============================================================================
-
+/**
+ * String replace
+ */
 @function str-replace($string, $search, $replace: "") {
 	$index: str-index($string, $search);
 
@@ -12,10 +11,9 @@
 	@return $string;
 }
 
-// =============================================================================
-// Font Face
-// =============================================================================
-
+/**
+ * Font Face
+ */
 @mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
 	$src: null;
 

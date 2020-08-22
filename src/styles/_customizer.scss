@@ -1,4 +1,5 @@
 @import 'mixins';
+@import 'palette';
 
 /**
  * TYPOGRAPHY
@@ -17,16 +18,15 @@ h1 {
   font-size: 1.75rem;
   line-height: 1.15;
   font-weight: 400;
-  @media (min-width: 22.5rem) { text-align: center }
-  @media (min-width: 62rem) {
+  @media (min-width: 22.5rem) { 
+    text-align: center;
     font-size: 2.1rem;
-    &.is-mobile { display: none }
   }
+  @media (min-width: 90rem) { font-size: 3rem } 
   &.is-mobile {
     margin: 1rem 1rem 0 .25rem;
-    @media (min-width: 22.5rem) {
-      margin-left: 1rem;
-    }
+    @media (min-width: 22.5rem) { margin-left: 1rem }
+    @media (min-width: 62rem) { display: none }
   }
 }
 
@@ -34,7 +34,11 @@ h1 {
  * COMPONENTS
  */
 // Buttons
-button[isroundbutton] { border-radius: 1rem }
-
+button[isroundbutton] { border-radius: 1.5rem }
+.mat-raised-button.mat-light {
+  background-color: transparent;
+  border: 2px solid map-get($atlantis, 500);
+  
+}
 // Icons
 .mat-icon { color: $dark-primary-text }

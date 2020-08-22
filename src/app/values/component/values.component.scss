@@ -5,20 +5,20 @@ header {
     position: absolute;
     bottom: 2rem;
     width: 100%;
+    h1 {
+      display: none;
+      margin-right: 1rem;
+      margin-left: 1rem;
+      @media (min-width: 62rem) { display: block }
+    }
   }
 }
 .content {
   display: grid;
-  @media (min-width: 48rem) {
-    grid-template-columns: 1fr 1fr;
-  }
+  @media (min-width: 48rem) { grid-template-columns: 1fr 1fr }
   header {
-    @media (min-width: 60.25rem) {
-      padding: 1rem;
-      &.subheader {
-        margin-top: .5rem;
-      }
-    }
+    @media (min-width: 48rem) { padding: 1rem }
+    @media (min-width: 60.25rem) { &.subheader {  margin-top: .5rem }}
   }
 }
 .main-text {

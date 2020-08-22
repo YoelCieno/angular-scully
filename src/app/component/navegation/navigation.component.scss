@@ -1,3 +1,5 @@
+@import 'src/styles/palette';
+
 header {
   display: flex;
   justify-content: space-between;
@@ -19,20 +21,38 @@ main {
   height: 100%;
   
 }
-.mat-drawer-container {
-  height: calc(100% - 0.1px);
-}
 
+.mat-drawer {
+  min-width: 16.22rem;
+  overflow-x: hidden;
+}
+.mat-drawer-container { height: calc(100% - 0.1px) }
+.mat-drawer-inner-container {
+  padding-right: 2rem;
+}
+.mat-drawer-content.mat-sidenav-content { overflow: initial }
+.mat-nav-list.mat-list-base {
+  padding: 0 1rem 0 .75rem;
+  .mat-list-item.mat-focus-indicator {
+    &:first-child {
+      margin-top: .5rem;
+    }
+    margin-top: .1rem;
+    border-radius: .25rem; 
+    &.active, &.active:hover {
+      background-color: map-get($soft-peach_hv, 600);
+    }
+    &:hover {
+      background-color: map-get($soft-peach_hv, 500);
+    }
+  }
+}
 .logo {
   max-width: 3.25rem;
   margin-left: .55rem;
-  &:hover {
-    opacity: .875;
-  }
+  &:hover { opacity: .875 }
 }
-.name {
-  margin-left: .5rem;
-}
+.name { margin-left: .5rem }
 .is-mobile .nav-sidenav-container {
   /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
      `<body>` to be our scrolling element for mobile layouts. */

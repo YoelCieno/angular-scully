@@ -1,6 +1,8 @@
 @import 'mixins';
-@import 'palette';
 
+/**
+ * TYPOGRAPHY
+ */
 // Fonts
 @include font-face('Montserrat', assets/fonts/montserrat-regular, normal, 400);
 
@@ -10,47 +12,29 @@ $custom-typography: mat-typography-config(
   $body-1: mat-typography-level(16px, 24px, 500)
 );
 
+// Headings
 h1 {
-  font-size: 3rem;
-  line-height: 1rem;
-}
-
-// Buttons
-button[isroundbutton] {
-  border-radius: 1rem;
-}
-
-// Icons
-.mat-icon {
-  color: $dark-primary-text;
-}
-
-// Drawer
-.mat-drawer {
-  min-width: 16.22rem;
-  overflow-x: hidden;
-}
-.mat-drawer-inner-container {
-  padding-right: 2rem;
-}
-.mat-drawer-content.mat-sidenav-content {
-  overflow: initial;
-}
-
-// List
-.mat-nav-list.mat-list-base {
-  padding: 0 1rem 0 .75rem;
-  .mat-list-item.mat-focus-indicator {
-    &:first-child {
-      margin-top: .5rem;
-    }
-    margin-top: .1rem;
-    border-radius: .25rem; 
-    &.active, &.active:hover {
-      background-color: map-get($soft-peach_hv, 600);
-    }
-    &:hover {
-      background-color: map-get($soft-peach_hv, 500);
+  font-size: 1.75rem;
+  line-height: 1.15;
+  font-weight: 400;
+  @media (min-width: 22.5rem) { text-align: center }
+  @media (min-width: 62rem) {
+    font-size: 2.1rem;
+    &.is-mobile { display: none }
+  }
+  &.is-mobile {
+    margin: 1rem 1rem 0 .25rem;
+    @media (min-width: 22.5rem) {
+      margin-left: 1rem;
     }
   }
 }
+
+/**
+ * COMPONENTS
+ */
+// Buttons
+button[isroundbutton] { border-radius: 1rem }
+
+// Icons
+.mat-icon { color: $dark-primary-text }

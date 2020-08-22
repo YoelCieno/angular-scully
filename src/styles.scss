@@ -2,10 +2,7 @@
 
 html, body { height: 100%; }
 html {
-  font-size: 14px;
-  @media (min-width: 22.5rem) {
-    font-size: 16px;
-  }
+  font-size: 16px;
   @media (min-width: 48rem) {
     font-size: 18px;
   }

@@ -24,8 +24,8 @@ header {
 .main-text {
   padding-left: .25rem;
   @media (min-width: 22.5rem) {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin-bottom: 2.5rem;
+    padding: 1rem 1rem 2.5rem;
   }
 }
 .main-img {

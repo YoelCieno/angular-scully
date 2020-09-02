@@ -1,21 +1,20 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './component/home.component';
-import { MatButtonModule } from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
+import { ValuesModule } from '../values/values.module';
+import { ProjectsModule } from '../projects/projects.module';
 
 @NgModule({
   declarations: [HomeComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MatButtonModule,
-    MatCardModule,
-    HomeRoutingModule
+    ValuesModule,
+    ProjectsModule
   ],
   exports: [HomeComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: []
 })
 
 export class HomeModule { }

@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ValuesConstants } from '../values.constants';
 
 @Component({
   selector: 'app-values',
   templateUrl: './values.component.html',
-  styleUrls: ['./values.component.scss']
+  styleUrls: ['./values.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class ValuesComponent implements OnInit {

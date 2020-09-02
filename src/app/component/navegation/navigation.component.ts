@@ -50,7 +50,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
   }
   
   private toogleMobile(): void {
-    this.mobileQuery = this.media.matchMedia('(max-width: 600px)');
+    this.mobileQuery = this.media.matchMedia('(max-width: 767px)');
     this._mobileQueryListener = () => {
       this.opened = false;
       this.cd.markForCheck();

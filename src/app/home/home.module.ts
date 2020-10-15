@@ -4,6 +4,9 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './component/home.component';
 import { ValuesModule } from '../values/values.module';
 import { ProjectsModule } from '../projects/projects.module';
+import { ContactModule } from '../contact/contact.module';
+import { WeModule } from '../we/we.module';
+import { NewsModule } from '../news/news.module';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -11,7 +14,10 @@ import { ProjectsModule } from '../projects/projects.module';
     CommonModule,
     HomeRoutingModule,
     ValuesModule,
-    ProjectsModule
+    ProjectsModule,
+    NewsModule,
+    WeModule,
+    ContactModule
   ],
   exports: [HomeComponent],
   schemas: []

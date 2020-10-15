@@ -1,4 +1,8 @@
-<app-values></app-values>
-<div class="desktop">
+ <app-values *ngIf="mobileQuery.matches"></app-values>
+<div *ngIf="!mobileQuery.matches">
+  <app-values></app-values>
+  <app-news></app-news>
   <app-projects></app-projects>
+  <app-we></app-we>
+  <app-contact></app-contact>
 </div>

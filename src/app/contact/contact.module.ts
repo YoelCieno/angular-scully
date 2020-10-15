@@ -8,7 +8,8 @@ import { ContactComponent } from './component/contact.component';
   imports: [
     CommonModule,
     ContactRoutingModule
-  ]
+  ],
+  exports: [ContactComponent]
 })
 
 export class ContactModule { }

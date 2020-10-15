@@ -34,7 +34,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
+    this.mobileQuery.removeEventListener('change', this._mobileQueryListener);
   }
 
   public toggleSideNav(): Promise<MatDrawerToggleResult> {
@@ -50,11 +50,11 @@ export class NavigationComponent implements OnInit, OnDestroy {
   }
   
   private toogleMobile(): void {
-    this.mobileQuery = this.media.matchMedia('(max-width: 767px)');
+    this.mobileQuery = this.media.matchMedia('(max-width: 47.9375em)');
     this._mobileQueryListener = () => {
       this.opened = false;
       this.cd.markForCheck();
     }
-    this.mobileQuery.addListener(this._mobileQueryListener);
+    this.mobileQuery.addEventListener('change', this._mobileQueryListener);
   }
 }

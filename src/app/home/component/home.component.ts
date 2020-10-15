@@ -1,4 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { MediaMatcher } from '@angular/cdk/layout';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +9,22 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 
 export class HomeComponent implements OnInit {
+  public mobileQuery: MediaQueryList;
 
-  constructor() { }
+  private _mobileQueryListener: () => void;
+
+  constructor(
+    private cd: ChangeDetectorRef, 
+    private media: MediaMatcher
+  ) { }
 
   ngOnInit(): void {
-    
+    this.toogleMobile();
   }
 
+  private toogleMobile(): void {
+    this.mobileQuery = this.media.matchMedia('(max-width: 47.9375em)');
+    this._mobileQueryListener = () => this.cd.markForCheck();
+    this.mobileQuery.addEventListener('change', this._mobileQueryListener);
+  }
 }

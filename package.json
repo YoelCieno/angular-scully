@@ -11,7 +11,8 @@
     "scully": "scully",
     "scully:serve": "scully serve",
     "jam": "ng build && npm run scully",
-    "jam-prod": "ng build --prod && npm run scully -- --nw"
+    "jam-prod": "ng build --prod && npm run scully -- --nw",
+    "postinstall": "ngcc"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +22,7 @@
     "@angular/compiler": "~9.0.1",
     "@angular/core": "~9.0.1",
     "@angular/forms": "~9.0.1",
+    "@angular/localize": "^9.1.13",
     "@angular/material": "^9.2.3",
     "@angular/platform-browser": "~9.0.1",
     "@angular/platform-browser-dynamic": "~9.0.1",

@@ -5,7 +5,7 @@
  * TYPOGRAPHY
  */
 // Fonts
-@include font-face('Montserrat', assets/fonts/montserrat-regular, normal, 400);
+@include font-face('Montserrat', '../assets/fonts/montserrat-regular', normal, 400);
 
 $custom-typography: mat-typography-config(
   $font-family: "'Montserrat', 'Helvetica Neue', sans-serif",
